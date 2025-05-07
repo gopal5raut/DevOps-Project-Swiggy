@@ -44,7 +44,7 @@ pipeline{
                 sh "trivy fs . > trivyfs.txt"
             }
         }
-        stage("Docker Build & Push"){
+        stage("Docker Build and Push"){
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker-creds', toolName: 'docker'){   
